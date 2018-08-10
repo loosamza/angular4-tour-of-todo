@@ -1,8 +1,25 @@
-<h2>My Heroes</h2>
-<ul class="todos">
-  <li *ngFor="let todo of todoList">
-    <a routerLink="/detail/{{todo.id}}">
-      <span class="badge">{{todo.id}}</span> {{todo.name}}
-    </a>
-  </li>
-</ul>
+<div class="row container">
+  <div class="col-4 mx-auto">
+    <div class="col-12">
+      <h4>My Task</h4>
+    </div>
+    <div class="col">
+      <div class="todo">
+        <div class="todo-search">
+          <input class="todo-search-field" [(ngModel)]="query" value="" placeholder="Search" type="search">
+        </div>
+        <ul>
+          <li *ngFor="let todo of todoList | search : query">
+            <div class="todo-content">
+              <h4 class="todo-name">
+                <strong>{{todo.name}}</strong>
+              </h4>
+              - {{todo.desc}}
+              <a routerLink="/detail/{{todo.id}}"></a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+<div class="row container">
+  <div class="col-4 mx-auto">
+    <form (ngSubmit)="addTodo(todoForm)" #todoForm = "ngForm">
+      <div class="row">
+        <div class="col-12 ">
+          <h4>Add Todo</h4>
+        </div>
+        <div class="col-4">
+          <label>Name : </label>
+        </div>
+        <div class="col-8 float-right">
+          <input class="form-control " name="name" ngModel>
+        </div>
+        <div class="col-4">
+          <label>Description : </label>
+        </div>
+        <div class="col-8 float-right">
+          <input class="form-control" name="desc" ngModel>
+        </div>
+        <div class="col-12" style="margin-top: 10px;">
+          <button class="btn btn-primary btn-lg btn-block" type="submit">ADD</button>
+        </div>
+
+
+      </div>
+    </form>
+  </div>
+</div>

@@ -19,9 +19,19 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
+        "../node_modules/bootstrap/dist/css/bootstrap.min.css",
+        "./assets/css/flat-ui.min.css",
+        "../node_modules/jquery-timepicker/jquery.timepicker.css",
         "styles.css"
+        
       ],
-      "scripts": [],
+      "scripts": [
+        "../node_modules/jquery/dist/jquery.min.js",
+        "../node_modules/jquery-ui-dist/jquery-ui.js",
+        "../node_modules/jquery-timepicker/jquery.timepicker.js",
+        "./assets/scripts/flat-ui.min.js",
+        "./assets/scripts/application.js"
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",

@@ -1,8 +1,41 @@
-<h1>{{title}}</h1>
-<ul>
-    <li><a routerLink="/todos">Todos</a></li>
-    <li><a routerLink="/dashboard">Dashboard</a></li>
-    <li><a routerLink="/add">Add</a></li>
-</ul>
+<div class="container">
+    <div class="todo-headline">
+        <h1 class="todo-logo">
+            <div class="logo"></div>
+            Todo App
+            <small>Write once bug anywhere</small>
+        </h1>
+    </div>
+    <div class="row">
+        <div class="col">
+            <nav class="navbar navbar-inverse navbar-embossed navbar-expand-lg" role="navigation">
+                <a class="navbar-brand" href="#">Todo App</a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse-01"></button>
+                <div class="collapse navbar-collapse" id="navbar-collapse-01">
+                    <ul class="nav navbar-nav mr-auto">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Todo</a>
+                            <span class="dropdown-arrow"></span>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a routerLink="/todos">View</a>
+                                </li>
+                                <li>
+                                    <a routerLink="/add">Add</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li >
+                            <a routerLink="/dashboard"  aria-expanded="true">Dashboard</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </nav>
+            <!-- /navbar -->
+        </div>
+    </div>
 
-<router-outlet></router-outlet>
+
+    <router-outlet></router-outlet>
+</div>

@@ -13,7 +13,7 @@ export class TodosComponent implements OnInit {
   constructor(private toService: TodoService) { }
 
   ngOnInit() {
-    console.log("I'm Do.")
+    console.log('TodosComponent Active ...');
     this.getTodoList();
   }
 
